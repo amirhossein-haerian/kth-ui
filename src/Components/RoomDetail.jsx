@@ -68,7 +68,7 @@ const RoomDetail = () => {
       </div>
       <ul style={styles.list}>
         {room.relation.map((obj) => (
-          <li key={obj.person._id} style={styles.listItem}>
+          obj.person && <li key={obj.person._id} style={styles.listItem}>
             {obj.person.firstName} {obj.person.lastName}
           </li>
         ))}
