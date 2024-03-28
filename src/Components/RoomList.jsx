@@ -64,7 +64,7 @@ const RoomList = () => {
 
   return (
     <div style={styles.container}>
-      <h2 style={styles.header}>All the Rooms</h2>
+      <h2 style={styles.header}>{!rooms.length ? "There is no Room!" : "All the Rooms"}</h2>
       {rooms.map((room) => (
         <div key={room._id} style={{ ...styles.roomItem, ...(room.isBooked ? {} : styles.nonBookedRoom) }}>
           <Link to={`/room/${room._id}`} style={styles.link}>
